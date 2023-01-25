@@ -30,8 +30,13 @@ public class Ejemplo04 {
             System.out.printf("Existe un error de tipo %s\n",
                     inputMismatchException);
         }
-        
+        //Scanner entrada = new Scanner(System.in);
         System.out.println("Continuamos");
+        /*System.out.println("Ingrese valor 3:");
+        int valor3 = entrada.nextInt(); // se espera un valor entero
+        System.out.println("Ingrese valor 4:");
+        int valor4 = entrada.nextInt();*/
+        
 
     }
 }

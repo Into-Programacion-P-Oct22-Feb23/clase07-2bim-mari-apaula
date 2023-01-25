@@ -12,21 +12,32 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo09 {
+public class Ejemplo101 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
         try {
-            System.out.println("Ingrese valor 1 a operar: ");// -1
+            System.out.println("Ingrese valor 1 a operar: ");
             int valor1 = entrada.nextInt();
-            System.out.println("Ingrese valor 2 a operar: ");//10
+            System.out.println("Ingrese valor 2 a operar: ");
             int valor2 = entrada.nextInt();
             if (valor1 < 0 || valor2 < 0){
                throw new Exception("Número negativos");
             }
+            
+            if (valor1>100){
+                throw new Exception("El valor de primer valor es muy alto");
+            }
+            if (valor1 == 10 || valor1 == 20 || valor1 == 30){
+                throw new Exception("El valor es un numero prohibido");
+            }
+            if (valor1 == 2 || valor1 == 4 || valor1 == 14){
+                throw new Exception("El valor es un numero prohibido");
+            }
             int resultado = valor1 / valor2;
             System.out.printf("Resultado %s\n", resultado);
+            
         } catch (ArithmeticException e) {
             System.out.printf("(ArithmeticException) Ocurrió una "
                     + "excepción %s\n", e);
